@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-            let x , y , z, res1 , res2 ;
-        let x = 2;
-        let y = 3;
-        let z = 4;
+        //         let x , y , z, res1 , res2 ;
+        //     let x = 2;
+        //     let y = 3;
+        //     let z = 4;
 
-        //z = x + y
+        //     //z = x + y
 
-        res1 = x + y 
-        document.write("total of x & y is" + res1 )
+        //     res1 = x + y 
+        //     document.write("total of x & y is" + res1 )
 
-        // alert (z);
-       // document.write(z)
+        //     // alert (z);
+        //    // document.write(z)
 
-    
+        function primeCheck() {
+            let num = prompt("Enter your number", "");
+
+            if (num == 1) {
+                return num + "Is not a prime number";
+            }
+
+            else if (num == 2) {
+                return num + "Is a prime number";
+
+            }
+            else {
+                for (let i = 2; i < num; i++) {
+                    if (num % i == 0) {
+                        return num + " Is not a prime number";
+
+                    }
+                }
+                return num + " Is a prime number";
+
+            }
+        }
+
+        document.write(primeCheck());
 
 
     </script>
 </body>
+
 </html>
