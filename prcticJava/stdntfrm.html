@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform">
+
+
+
+
+
+        Stadunt ID: <br>
+        <input type="text" name="Stadunt_id" placeholder="enter your id"> <br>
+        Name : <br>
+        <input type="text" name="Name" placeholder="enter your name"> <br>
+        Course Name : <br>
+        <input type="text" name="course" placeholder="enter your course"> <br>
+        Year /Section <br>
+        <input type="text" name="Yearsection" placeholder="enter your section"> <br>
+       
+
+
+        <button type="button" onclick="myFunction()">Click here</button>
+
+
+
+    </form>
+
+    <script>
+        function myFunction() {
+            let output =document.myform.Stadunt_id.value ;
+            let output2 =document.myform.Name.value ;
+            let output3 =document.myform.course.value ;
+            let output4 =document.myform.Yearsection.value;
+
+
+
+
+        if
+            (output == ""){
+                alert("Full ID must be enter") ;
+            }
+
+            else if (output2 == "") {
+                alert("Full name must be enter")
+
+            }
+
+            else if (output3 == "") {
+                alert("course must be enter")
+                
+            }
+
+            else if (output4 == "") {
+                alert("year must be enter")
+                
+            }
+
+            else {
+                let mywindow = window.open("" , "abc" , "width=800" , "height=450" );
+        
+          
+        mywindow.document.write (
+           "Stadunt_id" + output + "<br>" + "Name" + output2  + "<br>" + "course" + output3 + "<br>"  + "Yearsection" + output4 + "<br>"
+        ) ;
+         
+     
+
+            }
+
+
+        }
+
+        </script>
+</body>
+</html>
