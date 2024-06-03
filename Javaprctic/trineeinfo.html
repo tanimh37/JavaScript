@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform">
+
+    <input type="text" name="name" placeholder="enter your name"> <br>
+    <input type="text" name="contact" placeholder="enter your contact"> <br>
+
+    <textarea name="remarkes" id=""></textarea> <br>
+
+    Male<input type="radio" name="gender" id="" value="Male"> <br>
+    Female<input type="radio" name="gender" id="" value="Female"> <br>
+
+    <input type="checkbox" class="course" value="SSC">SSC <br>
+    <input type="checkbox" class="course" value="SSC">HSC <br>
+    <input type="checkbox" class="course" value="SSC">BBA <br>
+
+
+
+    <select name="location" id="">
+        <option >Banani</option>
+        <option >Basabo</option>
+        <option >NIlkhet</option>
+
+    </select>
+
+    <button type="button" onclick="info()">Click here</button>
+
+</form>
+
+
+
+<script>
+
+function info() {
+    let name = document.myform.name.value ;
+    let contact = document.myform.contact.value ;
+    let remarkes = document.myform.remarkes.value ;
+    let gender = document.myform.gender.value ;
+    let  location = document.myform.location.value ;
+
+    const course =
+
+
+    // alert (name) ;
+
+     output = " <h1>Student information </h1>"  ;
+
+     output += "name : " + name + " <br> " ;
+
+     output += "contact : " + contact + "<br>" ;
+
+     output += "remarks : " + remarkes + "<br>" ;
+
+     output += "gender : " + gender + "<br>" ;
+
+     output += "location : " + location + "<br>" ; 
+
+
+    let mw = window.open("" , "" , "width=750,height=750" );
+                mw.document.write(output) ;
+
+}
+
+</script>
+
+
+</body>
+</html>
