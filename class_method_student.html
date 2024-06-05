@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p><div id="show"></div></p>
+    <script>
+        class Student {
+            constructor (name , dob , email) {
+                this.stname = name ;
+                this.stdob = dob ;
+                this.stemail = email ; }
+
+                info () {
+                    let details = "<h1>Student information </h2>" ; 
+                 
+                    details += " Name: " +this.stname + "<br> " ;
+                    details += " Dob : " +this.stdob + "<br>" ;
+                    details += " Email : " +this.stemail + "<br>" ;
+                        return details ;
+                }
+        }
+
+        const st1 =new Student("Masud" , "2000-05-02" , "Masud@gmail.com") ;
+
+        const st2 =new Student("Joys Bhaya" , "2006-05-02" , "Joysbhaya@gmail.com") ;
+
+        const st3 =new Student("Abdullah" , "2010-12-06" , "goru@gmail.com") ;
+
+        // document.write(st2.info()) ;
+
+        document.getElementById("show").innerHTML = st1.info() + "<br>" + st2.info() + "<br>" + st3.info() ;
+    </script>
+</body>
+</html>

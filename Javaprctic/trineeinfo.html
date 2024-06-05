@@ -6,69 +6,53 @@
     <title>Document</title>
 </head>
 <body>
-    <form name="myform">
+    <form name="myfm">
+        <input type="name" name="name" id="" placeholder="enter your name"> <br>
+        <input type="contact" name="contact" id="" placeholder="enter your name"> <br>
+        <textarea name="remarks" id="" placeholder="please apnar area name den"></textarea> <br>
 
-    <input type="text" name="name" placeholder="enter your name"> <br>
-    <input type="text" name="contact" placeholder="enter your contact"> <br>
+        Male<input type="radio" name="gender" id="" value="male">
+        female<input type="radio" name="gender" id="" value="female"> <br>
 
-    <textarea name="remarkes" id=""></textarea> <br>
+        <input type="checkbox" name="course" id="">SSC
+        <input type="checkbox" name="course" id="">SSC <br>
 
-    Male<input type="radio" name="gender" id="" value="Male"> <br>
-    Female<input type="radio" name="gender" id="" value="Female"> <br>
-
-    <input type="checkbox" class="course" value="SSC">SSC <br>
-    <input type="checkbox" class="course" value="SSC">HSC <br>
-    <input type="checkbox" class="course" value="SSC">BBA <br>
-
-
-
-    <select name="location" id="">
-        <option >Banani</option>
-        <option >Basabo</option>
-        <option >NIlkhet</option>
-
-    </select>
-
-    <button type="button" onclick="info()">Click here</button>
-
-</form>
+        <select name="location">
+            <option>Banani</option>
+            <option>Dhanmondi</option>
+            <option>Babubazr Bosti</option>
 
 
+        </select> <br>
 
-<script>
+        <button type="button" onclick="info()">Click  here</button>
 
-function info() {
-    let name = document.myform.name.value ;
-    let contact = document.myform.contact.value ;
-    let remarkes = document.myform.remarkes.value ;
-    let gender = document.myform.gender.value ;
-    let  location = document.myform.location.value ;
+    </form>
 
-    const course =
+    <script>
+        function info() {
 
+            let name = document.myfm.name.value ; 
+            let contact = document.myfm.contact.value ; 
+            let remarks = document.myfm.remarks.value ; 
+            let gender = document.myfm.gender.value ; 
+            let location = document.myfm.location.value ; 
+            let course = document.myfm.course.value ;
 
-    // alert (name) ;
+            // alert (name) ;
+            let output = "<h1> Student info</h1>" ;
 
-     output = " <h1>Student information </h1>"  ;
-
-     output += "name : " + name + " <br> " ;
-
-     output += "contact : " + contact + "<br>" ;
-
-     output += "remarks : " + remarkes + "<br>" ;
-
-     output += "gender : " + gender + "<br>" ;
-
-     output += "location : " + location + "<br>" ; 
-
-
-    let mw = window.open("" , "" , "width=750,height=750" );
-                mw.document.write(output) ;
-
-}
-
-</script>
+            output += "name : " + name + "<br>" ;
+            output += "contact : " + contact + "<br>" ;
+            output += "remarks : " + remarks + "<br>" ;
+            output += "gender : " + gender + "<br>" ;
+            output += "location : " + location + "<br>" ;
+            output += "course : " + course + "<br>" ;
 
 
+            let mw = window.open("" , "" , "width=750,height=750" );
+              mw.document.write(output) ;
+        }
+    </script>
 </body>
 </html>

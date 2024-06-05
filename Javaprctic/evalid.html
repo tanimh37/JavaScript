@@ -7,35 +7,35 @@
 </head>
 <body>
     <form name="myfm">
-        <input type="text" name="email" id="" placeholder="Enter your email"> <br>
-        <input type="text" name="con_email" id="" placeholder="repeat your email"> <br>
-        <input type="password" name="password" id="" placeholder="enter password"> <br>
-        <button onclick="validate()" value="VALIDATE" name="submit">Click here</button>
+        <input type="email" name="email" id="" placeholder="enter your email"> <br>
+        <input type="text" name="conemail" id="" placeholder="re-type your email"> <br>
+        <input type="text" name="pass" id="" placeholder="enter your password">
 
+        <button type="button" name="submit" onclick="validation()" value="validation">click here</button>
     </form>
+
     <script>
-        function validate() {
-            let email1 = document.myfm.email.value ;
-            let email2 = document.myfm.con_email.value ;
-            let pass = document.myfm.password.value ;
-            let pattern = /[A-z0-9]+@[A-z]+\.[a-z]/;
-            let result =email1.search (pattern) ;
+       function validation () {
+            let email1 =document.myfm.email.value ;
+            let email2 = document.myfm.conemail.value ;
+            let pass =document.myfm.pass.value ;
 
-            if(result ==-1 ) {  alert ("not validate") ;
-                }
-            else if (email1!=email2) { alert("not matched") ;
+            let pattern =/[A-z0-9]+@[A-z]+\.[A-z]/ ;
+            let result = email1.search(pattern) ;
 
-            }
-            
-            else if (pass.length<6) { alert ("not validate") ;
+            if (result==-1) { alert ("not valid") ;
 
-            }
+            } 
 
-            else{ alert ("validate") ;
+            else if (email1!=email2) { alert ("not matched") ;
 
             }
+            else if (pass.length<6) { alert ("not valid") ;
 
-
+            } 
+            else {
+                alert ("valid") ;
+            }
         }
     </script>
 </body>
