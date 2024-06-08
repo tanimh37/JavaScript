@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validation.js"></script>
+</head>
+<body>
+    <form name="login">
+        <input type="text" name="email"> <br>
+        
+        <input type="button" name="submit" value="SUBMIT" onclick="checkmail()">
+        
+    </form>
+
+    <script>
+
+        function checkmail() {
+            let m = document.login.email.value ;
+            let pattern2 = /[0-9]/;
+
+            if(m.search(pattern2) == 0) {
+                alert("Number can'n allwoed") 
+            }
+
+
+           else if (m =="") {
+                alert ("can,t be empty") 
+            } 
+
+
+            else  {
+
+                let checkobj1 = new validation (m) ;
+
+                //  console.log(checkobj1) ;
+                checkobj1.validate();
+            }
+
+        }
+    </script>
+</body>
+</html>
