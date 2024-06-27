@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="valide.js"></script>
+</head>
+
+<body>
+    <form name="l">
+        <input type="email" name="email" id="" placeholder="enter your email"> <br>
+        <input type="password" name="password" placeholder="enter your name">
+        <button name="button" value="check" onclick="checkmail()" >SUBMIT</button>
+
+    </form>
+
+    <script>
+        function checkmail() {
+            let email = document.l.email.value;
+            let password = document.l.password.value;
+
+
+
+            if (password == "") {
+                alert("Password field are required");
+            }
+
+            else if (password.length < 6) {
+                alert("Must be 6 character");
+            }
+            else if (email == "") {
+                alert("Email Must Be Enter");
+            }
+
+
+            else {
+
+                let checkobj1 = new validation(email);
+                checkobj1.validate();
+            }
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

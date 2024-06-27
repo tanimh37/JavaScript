@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="myform">
+        <input type="email" name="email" id="" placeholder="enter your email"> <br>
+
+        <button type="button" value="" onclick="checkmail()">SUBMIT</button>
+    </form>
+    <script>
+        class validation {
+            constructor(email) {
+                this.mail =email;
+            }
+
+            emailvalidate() {
+                let pattern = /[A-z0-9]+@[A-z]+\.[A-z]/;
+                if (this.mail.search(pattern) == -1) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
+
+        function checkmail() {
+            let email = document.myform.email.value;
+
+
+            let checkobj1 = new validation(email);
+            if (checkobj1.emailvalidate()) {
+                document.getElementById("show").innerHTML = "Email are correct";
+
+            }
+            else {
+                document.getElementById("show").innerHTML = "Email is wrong";
+
+            }
+
+
+
+        }
+
+    </script>
+
+    <div id="show"></div>
+</body>
+
+</html>
