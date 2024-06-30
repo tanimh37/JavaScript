@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+</head>
+<body>
+    <form name="myform">
+        UserEmail:
+        <input type="text" name="email" placeholder="Enter your email"><br>
+        UserPassword:
+        <input type="password" name="password" placeholder="Enter your password"><br>
+        <button type="button" onclick="Cdata()">SUBMIT</button>
+    </form>
+    <script>
+        class LoginForm {
+            constructor(email, password) {
+                this.email = email;
+                this.password = password;
+            }
+            checkData() {
+                var pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,4}$/i;
+                if (!pattern.test(this.email)) {
+                    alert("Please enter a valid email address");
+                } else {
+                    document.write("Successful Login");
+                }
+            }
+        }
+        function Cdata() {
+            let email = document.myform.email.value;
+            let password = document.myform.password.value;
+            if (email === "") {
+                alert("Email field is required");
+            } else if (password === "") {
+                alert("Password field is required");
+            } else if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+            } else {
+                let lastCheck = new LoginForm(email, password);
+                lastCheck.checkData();
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        Email: <br> <input type="text" name="user" placeholder="Enter email"> <br>
+        Password: <br> <input type="text" name="pass" placeholder="Enter password"><br>
+        <button type="button" onclick="logincheck()">Submit</button>
+    </form>
+    <script>
+        class loginform{
+            constructor(user,password) {
+                this.user = user;
+                this.password = password;
+            } 
+            getdata() {
+                if(this.password == "") {
+                    alert("please enter your password") ;
+                }
+
+                else if(this.password.length<8) {
+                    alert("password must be 8 digit");
+                }
+                else {
+                    alert("login complited");
+                }
+            }
+        }
+
+        function logincheck() {
+            let user = document.myform.user.value;
+            let password = document.myform.pass.value;
+
+            if(user =="") {
+                alert("user must be enter") ;
+            }
+            else if (user.length<6) {
+                alert("user must be 6 digit") ;
+            }
+            else {
+                let data = new loginform(user,password) ;
+                data.getdata();
+            }
+
+        }
+    </script>
+
+</body>
+</html>
