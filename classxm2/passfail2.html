@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="passfail">
+        <input type="number" name="mcq" placeholder="enter your mcq"> <br>
+        <input type="number" name="des" placeholder="enter your des"> <br>
+        <input type="number" name="ev" placeholder="enter your ev"> <br>
+
+    <button type="button" onclick="passfaildata()">click</button>
+    </form>
+
+    <div id="show"></div>
+    <script>
+        function passfaildata() {
+        let mcq =document.passfail.mcq.value ;
+        let  des=document.passfail.des.value ;
+        let ev =document.passfail.ev.value ;
+
+        if(mcq >=80 && des >=60 && ev >=60) {
+            document.getElementById("show").innerHTML="you have been passed" ;
+        }
+        else{
+            document.getElementById("show").innerHTML="you have been failed" ;
+        }
+    }
+
+    </script>
+</body>
+</html>

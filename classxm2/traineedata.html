@@ -25,34 +25,34 @@
 
         </select> <br>
         Couurses : <br>
-        <input type="checkbox" name="PHP" class="cd" value="PHP">PHP
-        <input type="checkbox" name="CSS" class="cd" value="Oracal">Oracal
-        <input type="checkbox" name="JAVA" class="cd" value="JAVA">JAVA
+        <input type="checkbox"  class="cd" value="PHP">PHP
+        <input type="checkbox"  class="cd" value="Oracal">Oracal
+        <input type="checkbox"  class="cd" value="JAVA">JAVA
 
         <button type="button" onclick="fromdata()" value="SUBMIT">SUBMIT</button>
 
     </form>
     <script>
         class frominfo {
-            constructor(name, address, gender, location, course) {
+            constructor(na, add, gen, lo, co) {
 
-                this.name = name ;
-                this.address = address;
-                this.gender = gender;
-                this.location = location;
-                this.data = course;
+                this.nam = na ;
+                this.addr = add;
+                this.gend = gen;
+                this.loca = lo;
+                this.dat = co;
             }
             getdata() {
                 let output = "<h1> Stadunt Informtion </h1>";
-                output += "name : " + this.name + "<br>";
+                output += "Name : " + this.nam + "<br>";
 
-                output += "address : " + this.address + "<br>";
+                output += "Address : " + this.addr + "<br>";
 
-                output += "gender : " + this.gender + "<br>";
+                output += "Gender : " + this.gend + "<br>";
 
-                output += "location : " + this.location + "<br>";
+                output += "Location : " + this.loca + "<br>";
 
-                output += "course : " + this.data + "<br>";
+                output += "Course : " + this.dat + "<br>";
 
                 let mw = window.open("", "", "width=1050,height=750");
                 mw.document.write(output);
@@ -60,24 +60,24 @@
         }
 
         function fromdata() {
-            let name = document.myfm.name.value;
+            let n = document.myfm.name.value;
 
-            let address = document.myfm.address.value;
+            let a = document.myfm.address.value;
 
-            let gender = document.myfm.gender.value;
+            let g = document.myfm.gender.value;
 
-            let location = document.myfm.location.value;
+            let l = document.myfm.location.value;
 
             const course = document.getElementsByClassName("cd");
 
-            let data = "";
+            let d = "";
 
             for (let i = 0; i < course.length; i++) {
                 if (course[i].checked) {
                     data += course[i].value + ", ";
                 }
             }
-            let res = new frominfo(name, address, gender, location, data) ;
+            let res = new frominfo(n, a, g, l, d) ;
             res.getdata();
 
         }

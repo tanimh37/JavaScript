@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action name="stform">
+        Name: <br />
+        <input type="text" name="name" placeholder="enter your name" />
+        <br />
+        Address : <br />
+        <textarea name="address"></textarea> <br />
+        Gender : <br />
+        <input type="radio" name="gender" value="male" /> male <br />
+        <input type="radio" name="gender" value="female" /> female <br />
+        Location : <br />
+        <select name="lo" id>
+            <option value="Banani">Banani</option>
+            <option value="Mothijheel">Mothijheel</option>
+            <option value="Mugda">Mugda</option>
+        </select>
+        <br />
+        Course : <br />
+        <input type="checkbox" value="php" class="tanim" />php <br />
+        <input type="checkbox" value="css" class="tanim" />css <br />
+        <input type="checkbox" value="java" class="tanim" />java <br />
+
+        <button type="button" onclick="stdata()" value="submit">SUBMIT</button>
+    </form>
+    <script>
+        class stinfo {
+            constructor(name, address, gender, location, course) {
+                this.name = name;
+                this.ad = address;
+                this.ge = gender;
+                this.loc = location;
+                this.cou = course;
+            }
+            getdata() {
+                let output = "<h1> Stadunt Informtion </h1>";
+
+                output += "Name : " + this.name + "<br>";
+
+                output += "Address : " + this.ad + "<br>";
+
+                output += "Gender : " + this.ge + "<br>";
+
+                output += "Location : " + this.ge + "<br>";
+
+                output += "Course : " + this.data + "<br>";
+
+                let mw = window.open("", "", "width=1050,height=750");
+                mw.document.write(output);
+            }
+        }
+        function stdata() {
+            let name = document.stform.name.value;
+            let ad = document.stform.address.value;
+            let ge = document.stform.gender.value;
+            let lo = document.stform.location.value;
+
+            const course = document.getElementById("tanim").innerHTML;
+            let data = "";
+            for (let i = 0; i < course.length; i++) {
+                if (course[i].checked) {
+                    data += course[i].value + ", ";
+                }
+            }
+
+            let objcheck = new stinfo(name, ad, ge, lo, data);
+            objcheck.getdata();
+        }
+    </script>
+</body>
+
+</html>
